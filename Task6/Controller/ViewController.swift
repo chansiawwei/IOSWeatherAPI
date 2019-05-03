@@ -102,6 +102,9 @@ class ViewController: UITableViewController,CLLocationManagerDelegate {
     
     
     
+    @IBAction func SwitchTapped(_ sender: Any) {
+        performSegue(withIdentifier: "segue2", sender: self)
+    }
     
     
     //MARK: - JSON Parsing
@@ -132,10 +135,13 @@ class ViewController: UITableViewController,CLLocationManagerDelegate {
         destinationVC.lat=latitute
         destinationVC.long=longtitude
         
+        
+        
     }
     
 
-
+  
+    
     
     
     //MARK: - UI Updates

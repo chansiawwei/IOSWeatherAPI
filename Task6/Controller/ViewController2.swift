@@ -45,7 +45,24 @@ class ViewController2:UIViewController{
 //        label2.text="latitute:\(lat)+: longtitude:\(long)"
 //        print(long)
 //        print(lat)
-     
+        
+        if(label2.text! == "Label"){
+            label2.text="Unvailable..."
+        }
+        if(cityLabel.text!=="Label"){
+            cityLabel.text="Connection problem, please check."
+        }
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Create a new variable to store the instance of PlayerTableViewController
+        let destinationVC = segue.destination as! displayController
+        //   destinationVC.cloud = _cloud
+        destinationVC.lat=lat
+        destinationVC.long=long
+        
+        
         
     }
     
@@ -140,8 +157,7 @@ class ViewController2:UIViewController{
             default:
                 label2.text="coming soon"
             }
-            
-            
+         
         }
         
         
